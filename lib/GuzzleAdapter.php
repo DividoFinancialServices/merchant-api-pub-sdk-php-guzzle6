@@ -2,6 +2,7 @@
 
 namespace Divido\MerchantSDKGuzzle6;
 
+use Divido\MerchantSDK\HttpClient\IHttpClient;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
