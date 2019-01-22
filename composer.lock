@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81c3fe03c01320ddb2961cec65ee1ae8",
+    "content-hash": "0809f09d1cfc62f4706e67e3ead4ca58",
     "packages": [
         {
             "name": "divido/merchant-sdk",
-            "version": "dev-master",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:dividohq/merchant-api-pub-sdk-php.git",
+                "url": "https://github.com/dividohq/merchant-api-pub-sdk-php.git",
                 "reference": "0e9db5dbb56505216a1be1ed74046eec6141acb4"
             },
             "dist": {
@@ -40,24 +40,13 @@
                     "Divido\\MerchantSDK\\": "lib/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Divido\\MerchantSDK\\Test\\": "tests/"
-                },
-                "classmap": [
-                    "tests"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Neil McGibbon",
                     "email": "code@neilmcgibbon.com"
                 }
             ],
-            "support": {
-                "source": "https://github.com/dividohq/merchant-api-pub-sdk-php/tree/master",
-                "issues": "https://github.com/dividohq/merchant-api-pub-sdk-php/issues"
-            },
             "time": "2019-01-14T17:49:19+00:00"
         },
         {
@@ -1887,9 +1876,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "divido/merchant-sdk": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
