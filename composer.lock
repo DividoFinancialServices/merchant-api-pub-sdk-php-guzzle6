@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0809f09d1cfc62f4706e67e3ead4ca58",
+    "content-hash": "d14b649fa707c21faf1dc6e1f545029a",
     "packages": [
         {
             "name": "divido/merchant-sdk",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dividohq/merchant-api-pub-sdk-php.git",
-                "reference": "0e9db5dbb56505216a1be1ed74046eec6141acb4"
+                "reference": "3c4998a3482f2dea4fe3e740d8ed17c87a1b1c13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dividohq/merchant-api-pub-sdk-php/zipball/0e9db5dbb56505216a1be1ed74046eec6141acb4",
-                "reference": "0e9db5dbb56505216a1be1ed74046eec6141acb4",
+                "url": "https://api.github.com/repos/dividohq/merchant-api-pub-sdk-php/zipball/3c4998a3482f2dea4fe3e740d8ed17c87a1b1c13",
+                "reference": "3c4998a3482f2dea4fe3e740d8ed17c87a1b1c13",
                 "shasum": ""
             },
             "require": {
@@ -47,7 +47,7 @@
                     "email": "code@neilmcgibbon.com"
                 }
             ],
-            "time": "2019-01-14T17:49:19+00:00"
+            "time": "2019-02-19T08:48:11+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1190,6 +1190,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-06-30T09:13:00+00:00"
         },
         {
