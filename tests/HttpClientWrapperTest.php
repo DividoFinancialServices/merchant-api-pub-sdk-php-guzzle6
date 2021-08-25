@@ -2,16 +2,16 @@
 
 namespace Divido\MerchantSDKGuzzle6\Test;
 
-use Divido\MerchantSDKGuzzle6\GuzzleAdapter;
 use Divido\MerchantSDK\Client;
 use Divido\MerchantSDK\Environment;
 use Divido\MerchantSDK\Handlers\ApiRequestOptions;
 use Divido\MerchantSDK\HttpClient\HttpClientWrapper;
-use Divido\MerchantSDK\HttpClient\Uri;
+use Divido\MerchantSDKGuzzle6\GuzzleAdapter;
 use GuzzleHttp\Client as Guzzle;
 use GuzzleHttp\Psr7\Response;
-use PHPUnit\Framework\TestCase;
+
 use function GuzzleHttp\Psr7\stream_for;
+use PHPUnit\Framework\TestCase;
 
 class HttpClientWrapperTest extends TestCase
 {
