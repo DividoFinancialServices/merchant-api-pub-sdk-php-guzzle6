@@ -14,7 +14,6 @@ use Psr\Http\Message\UriInterface;
  * @author Neil McGibbon <neil.mcgibbon@divido.com>
  * @author Mike Lovely <mike.lovely@divido.com>
  * @copyright (c) 2018, Divido
- * @package Divido\MerchantSDK
  */
 class GuzzleAdapter implements IHttpClient
 {
@@ -40,7 +39,7 @@ class GuzzleAdapter implements IHttpClient
     {
         $this->client = $client;
     }
-    
+
     /**
      * Submit an HTTP HEAD request
      *
@@ -51,15 +50,16 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function head(UriInterface $url, array $headers = [])
+    public function head(UriInterface $url, array $headers = []): ResponseInterface
     {
         return $this->getClient()->send(
-            new Request('HEAD', $url, $headers), [
+            new Request('HEAD', $url, $headers),
+            [
                 'http_errors' => false,
             ]
         );
     }
-    
+
     /**
      * Submit an HTTP GET request
      *
@@ -70,10 +70,11 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function get(UriInterface $url, array $headers = [])
+    public function get(UriInterface $url, array $headers = []): ResponseInterface
     {
         return $this->getClient()->send(
-            new Request('GET', $url, $headers), [
+            new Request('GET', $url, $headers),
+            [
                 'http_errors' => false,
             ]
         );
@@ -90,10 +91,11 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function post(UriInterface $url, array $headers = [], $payload = '')
+    public function post(UriInterface $url, array $headers = [], $payload = ''): ResponseInterface
     {
         return $this->getClient()->send(
-            new Request('POST', $url, $headers, $payload), [
+            new Request('POST', $url, $headers, $payload),
+            [
                 'http_errors' => false,
             ]
         );
@@ -109,10 +111,11 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function delete(UriInterface $url, array $headers = [])
+    public function delete(UriInterface $url, array $headers = []): ResponseInterface
     {
         return $this->getClient()->send(
-            new Request('DELETE', $url, $headers), [
+            new Request('DELETE', $url, $headers),
+            [
                 'http_errors' => false,
             ]
         );
@@ -129,10 +132,11 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function patch(UriInterface $url, array $headers = [], $payload = '')
+    public function patch(UriInterface $url, array $headers = [], $payload = ''): ResponseInterface
     {
         return $this->getClient()->send(
-            new Request('PATCH', $url, $headers, $payload), [
+            new Request('PATCH', $url, $headers, $payload),
+            [
                 'http_errors' => false,
             ]
         );
@@ -157,7 +161,7 @@ class GuzzleAdapter implements IHttpClient
      *
      * @return ClientInterface
      */
-    private function getClient()
+    private function getClient(): ClientInterface
     {
         return $this->client;
     }
