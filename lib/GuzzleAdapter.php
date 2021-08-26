@@ -50,7 +50,7 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function head(UriInterface $url, array $headers = []): ResponseInterface
+    public function head(UriInterface $url, array $headers = [])
     {
         return $this->getClient()->send(
             new Request('HEAD', $url, $headers),
@@ -70,7 +70,7 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function get(UriInterface $url, array $headers = []): ResponseInterface
+    public function get(UriInterface $url, array $headers = [])
     {
         return $this->getClient()->send(
             new Request('GET', $url, $headers),
@@ -91,7 +91,7 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function post(UriInterface $url, array $headers = [], $payload = ''): ResponseInterface
+    public function post(UriInterface $url, array $headers = [], $payload = '')
     {
         return $this->getClient()->send(
             new Request('POST', $url, $headers, $payload),
@@ -111,7 +111,7 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function delete(UriInterface $url, array $headers = []): ResponseInterface
+    public function delete(UriInterface $url, array $headers = [])
     {
         return $this->getClient()->send(
             new Request('DELETE', $url, $headers),
@@ -132,7 +132,7 @@ class GuzzleAdapter implements IHttpClient
      *
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function patch(UriInterface $url, array $headers = [], $payload = ''): ResponseInterface
+    public function patch(UriInterface $url, array $headers = [], $payload = '')
     {
         return $this->getClient()->send(
             new Request('PATCH', $url, $headers, $payload),
@@ -161,7 +161,7 @@ class GuzzleAdapter implements IHttpClient
      *
      * @return ClientInterface
      */
-    private function getClient(): ClientInterface
+    private function getClient()
     {
         return $this->client;
     }
