@@ -42,6 +42,26 @@ class GuzzleAdapter implements IHttpClient
     }
 
     /**
+     * Submit an HTTP HEAD request
+     *
+     * @param UriInterface $url The url to send the request to $uri
+     * @param array $headers A key/value pair array of headers to send with the request
+     *
+     * @return ResponseInterface The HTTP response (PSR implementation)
+     *
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function head(UriInterface $url, array $headers = [])
+    {
+        return $this->getClient()->send(
+            new Request('HEAD', $url, $headers),
+            [
+                'http_errors' => false,
+            ]
+        );
+    }
+
+    /**
      * Submit an HTTP GET request
      *
      * @param UriInterface $url The url to send the request to $uri
@@ -54,7 +74,8 @@ class GuzzleAdapter implements IHttpClient
     public function get(UriInterface $url, array $headers = [])
     {
         return $this->getClient()->send(
-            new Request('GET', $url, $headers), [
+            new Request('GET', $url, $headers),
+            [
                 'http_errors' => false,
             ]
         );
@@ -74,7 +95,8 @@ class GuzzleAdapter implements IHttpClient
     public function post(UriInterface $url, array $headers = [], $payload = '')
     {
         return $this->getClient()->send(
-            new Request('POST', $url, $headers, $payload), [
+            new Request('POST', $url, $headers, $payload),
+            [
                 'http_errors' => false,
             ]
         );
@@ -93,7 +115,8 @@ class GuzzleAdapter implements IHttpClient
     public function delete(UriInterface $url, array $headers = [])
     {
         return $this->getClient()->send(
-            new Request('DELETE', $url, $headers), [
+            new Request('DELETE', $url, $headers),
+            [
                 'http_errors' => false,
             ]
         );
@@ -113,7 +136,8 @@ class GuzzleAdapter implements IHttpClient
     public function patch(UriInterface $url, array $headers = [], $payload = '')
     {
         return $this->getClient()->send(
-            new Request('PATCH', $url, $headers, $payload), [
+            new Request('PATCH', $url, $headers, $payload),
+            [
                 'http_errors' => false,
             ]
         );
