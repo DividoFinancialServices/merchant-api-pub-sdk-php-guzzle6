@@ -120,7 +120,7 @@ jobs:
           bin/phpunit
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: "Code Coverage Report ${{ matrix.php_versions }}"
           path: coverage
