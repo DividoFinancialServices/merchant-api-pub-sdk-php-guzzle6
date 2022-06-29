@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51f6c0f074c8c269922c361934acfa46",
+    "content-hash": "a6c55a0157762b287800e339382383a4",
     "packages": [
         {
             "name": "divido/merchant-sdk",
-            "version": "v2.1.0",
+            "version": "dev-guzzle7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dividohq/merchant-api-pub-sdk-php.git",
-                "reference": "3c4998a3482f2dea4fe3e740d8ed17c87a1b1c13"
+                "reference": "c173baa9320ad8623592ca20e209794ca2116032"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dividohq/merchant-api-pub-sdk-php/zipball/3c4998a3482f2dea4fe3e740d8ed17c87a1b1c13",
-                "reference": "3c4998a3482f2dea4fe3e740d8ed17c87a1b1c13",
+                "url": "https://api.github.com/repos/dividohq/merchant-api-pub-sdk-php/zipball/c173baa9320ad8623592ca20e209794ca2116032",
+                "reference": "c173baa9320ad8623592ca20e209794ca2116032",
                 "shasum": ""
             },
             "require": {
@@ -26,12 +26,13 @@
                 "psr/log": "^1"
             },
             "require-dev": {
-                "guzzlehttp/guzzle": "^6.3",
+                "guzzlehttp/guzzle": "^6.3 || ^7",
                 "hamcrest/hamcrest-php": "^2.0",
                 "kint-php/kint": "^2.1",
                 "mockery/mockery": "1.1.0",
                 "phpdocumentor/phpdocumentor": "2.9.0",
                 "phpdocumentor/reflection-docblock": "~2.0",
+                "phpstan/phpstan": "^0.12.32",
                 "phpunit/phpunit": "^5"
             },
             "type": "library",
@@ -47,7 +48,11 @@
                     "email": "code@neilmcgibbon.com"
                 }
             ],
-            "time": "2019-02-19T08:48:11+00:00"
+            "support": {
+                "issues": "https://github.com/dividohq/merchant-api-pub-sdk-php/issues",
+                "source": "https://github.com/dividohq/merchant-api-pub-sdk-php/tree/guzzle7"
+            },
+            "time": "2022-06-29T09:55:57+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -534,16 +539,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.0",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
             "require": {
@@ -552,7 +557,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -567,7 +572,7 @@
             "authors": [
                 {
                     "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
+                    "homepage": "https://www.php-fig.org/"
                 }
             ],
             "description": "Common interface for logging libraries",
@@ -577,7 +582,10 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2018-11-20T15:27:04+00:00"
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -1061,16 +1069,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.37",
+            "version": "0.12.99",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "5e16d83e6eb2dd784fbdaeaece5e2bca72e4f68a"
+                "reference": "b4d40f1d759942f523be267a1bab6884f46ca3f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/5e16d83e6eb2dd784fbdaeaece5e2bca72e4f68a",
-                "reference": "5e16d83e6eb2dd784fbdaeaece5e2bca72e4f68a",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b4d40f1d759942f523be267a1bab6884f46ca3f7",
+                "reference": "b4d40f1d759942f523be267a1bab6884f46ca3f7",
                 "shasum": ""
             },
             "require": {
@@ -1099,9 +1107,17 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
+            "support": {
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.99"
+            },
             "funding": [
                 {
                     "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
                     "type": "github"
                 },
                 {
@@ -1113,7 +1129,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-08-09T14:32:41+00:00"
+            "time": "2021-09-12T20:09:55+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -2199,7 +2215,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "divido/merchant-sdk": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
