@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a6c55a0157762b287800e339382383a4",
+    "content-hash": "2b6c3d63cf93c15fc8b20107306dcc6e",
     "packages": [
         {
             "name": "divido/merchant-sdk",
@@ -2214,11 +2214,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "divido/merchant-sdk": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.6"
